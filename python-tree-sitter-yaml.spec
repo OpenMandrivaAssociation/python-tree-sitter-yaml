@@ -6,6 +6,8 @@ License:	MIT
 Group:		Development/Python
 URL:		https://pypi.org/project/tree-sitter-yaml
 Source0:	https://files.pythonhosted.org/packages/57/b6/941d356ac70c90b9d2927375259e3a4204f38f7499ec6e7e8a95b9664689/tree_sitter_yaml-0.7.2.tar.gz
+# PyPI sdist omits scanner.c and schema.*.c
+Source1:	tree-sitter-yaml-extra-src.tar.xz
 BuildRequires:	python
 BuildRequires:	pkgconfig(python)
 BuildRequires:	python%{pyver}dist(pip)
@@ -19,6 +21,7 @@ Aider's grep-ast repo-map.
 
 %prep
 %autosetup -n tree_sitter_yaml-0.7.2
+tar -C src -xf %{SOURCE1}
 
 %build
 
