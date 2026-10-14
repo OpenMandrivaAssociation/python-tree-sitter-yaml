@@ -1,6 +1,6 @@
 Name:		python-tree-sitter-yaml
 Version:	0.7.2
-Release:	1
+Release:	2
 Summary:	Tree-sitter yaml grammar (Python bindings)
 License:	MIT
 Group:		Development/Python
@@ -9,7 +9,7 @@ Source0:	https://files.pythonhosted.org/packages/57/b6/941d356ac70c90b9d29273752
 # PyPI sdist omits scanner.c and schema.*.c
 Source1:	tree-sitter-yaml-extra-src.tar.xz
 BuildRequires:	python
-BuildRequires:	pkgconfig(python)
+BuildRequires:	pkgconfig(python3)
 BuildRequires:	python%{pyver}dist(pip)
 BuildRequires:	python%{pyver}dist(setuptools)
 BuildRequires:	clang
